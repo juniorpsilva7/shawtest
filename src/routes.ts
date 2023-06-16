@@ -9,13 +9,6 @@ const router = Router()
 
 const multerConfig = multer()
 
-interface NameSports {
-    name: string;
-    city: string;
-    country: string;
-    favorite_sport: string;
-}
-
 router.post("/api/files", multerConfig.single("file"), async (request: Request, response: Response) => {
     const { file } = request;
     if (file !== undefined) {
