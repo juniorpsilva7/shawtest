@@ -53,6 +53,11 @@ class NameSportsRepository {
         return rows;
     }
 
+    findAll() {
+        const sql = "SELECT * FROM name_sports;"
+        return sqlQuery(sql, [], 'It was not possible to find')
+    }
+
 }
 
 export default new NameSportsRepository

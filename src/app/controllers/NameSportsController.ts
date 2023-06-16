@@ -15,7 +15,9 @@ class NameSportsController {
             const row = await NameSportsRepository.findByQuery(q.toString())
             res.json(row)
         } else {
-            res.json("Search without term");
+            const row = await NameSportsRepository.findAll();
+            res.json(row)
+
         }
         
     }
