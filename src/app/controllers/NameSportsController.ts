@@ -17,7 +17,6 @@ class NameSportsController {
         } else {
             const row = await NameSportsRepository.findAll();
             res.json(row)
-
         }
         
     }
